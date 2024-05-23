@@ -53,3 +53,201 @@ body {
   top: 20px;
   left: 20px;
 }
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  width: 120px;
+  cursor: pointer;
+}
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+.content h1 {
+  font-size: 70px;
+  margin-top: 80px;
+}
+.content p {
+  margin: 20px auto;
+  font-weight: 500;
+  line-height: 20px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+.createContactButton {
+  width: 150px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  border: 2px solid #009688;
+  background: transparent;
+  cursor: pointer;
+  color: #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.viewContactsButton {
+  width: 150px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  border: 2px solid #009688;
+  background: transparent;
+  cursor: pointer;
+  color: #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.buttonSpan {
+  background: #009688;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.viewContactsButton:hover .buttonSpan {
+  width: 100%;
+}
+.createContactButton:hover .buttonSpan {
+  width: 100%;
+}
+.viewContactsButton:hover {
+  border: none;
+}
+.createContactButton:hover {
+  border: none;
+}
+
+.section-2 {
+  margin-top: 100px;
+}
+.AddContactDiv {
+  width: 360px;
+  height: 420px;
+  margin: auto;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  top: 30%;
+  left: 36%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  display: none;
+}
+.login-box {
+  width: 360px;
+  height: 280px;
+  margin: auto;
+  border-radius: 3px;
+  background-color: white;
+}
+h1 {
+  text-align: center;
+  padding-top: 15px;
+}
+
+form {
+  width: 300px;
+  margin-left: 20px;
+}
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+}
+form input {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+#submitContact {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
+}
+p {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 15px;
+}
+.contactCard {
+  width: 40%;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  border-radius: 10px;
+  background: #282d40;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  border: 2px solid #009688;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+.contactDetails {
+  display: flex;
+  align-items: center;
+  width: 450px;
+  justify-content: space-around;
+  height: 60px;
+}
+#Pokedex_p {
+  letter-spacing: 0.68px;
+  position: relative;
+  bottom: 30px;
+}
+#PokedexBtn {
+  position: relative;
+  bottom: 30px;
+}
