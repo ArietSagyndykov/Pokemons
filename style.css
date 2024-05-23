@@ -53,3 +53,42 @@ body {
   top: 20px;
   left: 20px;
 }
+
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  color: white;
+  background-color: #222;
+}
+
+.btns {
+  margin: 25px 40px;
+}
+.navbar span {
+  margin: 25px 25px;
+}
+.logoPokemon {
+  margin-left: 40px;
+}
+.imgLogo {
+  margin-left: 25px;
+}
+.inpPokemon {
+  margin-top: 25px;
+  font-size: 20px;
+  border-radius: 10px;
+  height: 32px;
+  width: 270px;
+}
+.btns button {
+  height: 37.2px;
+  width: 80px;
+  border-radius: 10px;
+  margin-top: 3px;
+}
+
+#nav_btn_login {
+  margin-right: 15px;
+}
