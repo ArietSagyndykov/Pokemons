@@ -1,12 +1,93 @@
 body {
-  background-color: orangered;
+  background-color: black;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url(./img/wallpapersden.com_pokemon-4k-cool_5120x2880.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
+
+/* Navbar start */
+.navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+  padding: 10px 0;
+  position: fixed; /* Fixes the navbar at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 50px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo {
+  height: 40px;
+}
+
+.home-button {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+.home-button:hover {
+  text-decoration: underline;
+}
+
+.search-container {
+  flex: 1;
+  text-align: right;
+}
+
+.search-field {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent background for the input */
+  color: white; /* White text color */
+}
+
+.search-field::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Lighter placeholder text */
+}
+
+/* Navbar finish */
+
 .container {
   padding: 40px;
   margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+}
+.pokImg {
+  width: 300px;
+  margin-bottom: 30px;
 }
 .card {
   background-color: #f4f4f4;
@@ -27,6 +108,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(270px, 1.5fr));
   grid-gap: 27px;
 }
+
 .card-image {
   height: 130px;
 }
@@ -50,48 +132,13 @@ body {
 
 #closeBtn {
   position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.navbar {
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
+  top: 100px;
+  left: 500px;
   color: white;
-  background-color: #222;
+  background-color: red;
+  border-radius: 2px;
 }
 
-.btns {
-  margin: 25px 40px;
-}
-.navbar span {
-  margin: 25px 25px;
-}
-.logoPokemon {
-  margin-left: 40px;
-}
-.imgLogo {
-  margin-left: 25px;
-}
-.inpPokemon {
-  margin-top: 25px;
-  font-size: 20px;
-  border-radius: 10px;
-  height: 32px;
-  width: 270px;
-}
-.btns button {
-  height: 37.2px;
-  width: 80px;
-  border-radius: 10px;
-  margin-top: 3px;
-}
-
-#nav_btn_login {
-  margin-right: 15px;
-}
 .banner {
   width: 100%;
   height: 100vh;
@@ -103,30 +150,6 @@ body {
   width: 120px;
   cursor: pointer;
 }
-.navbar ul li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
-  position: relative;
-}
-.navbar ul li a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-}
-.navbar ul li::after {
-  content: "";
-  height: 3px;
-  width: 0;
-  background: #009688;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  transition: 0.5s;
-}
-.navbar ul li:hover::after {
-  width: 100%;
-}
 
 .content {
   width: 100%;
@@ -136,24 +159,28 @@ body {
   text-align: center;
   color: #fff;
 }
+
 .content h1 {
   font-size: 70px;
-  margin-top: 80px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: #f4f4f4;
 }
 .content p {
   margin: 20px auto;
   font-weight: 500;
   line-height: 20px;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-color: #ffbf00;
+  margin-bottom: 10px;
 }
-.createContactButton {
+.createPokemonBtn {
   width: 150px;
   padding: 15px 0;
   text-align: center;
   margin: 20px 10px;
   border-radius: 25px;
-  border: 2px solid #009688;
+  border: 2px solid #0492c2;
   background: transparent;
   cursor: pointer;
   color: #fff;
@@ -163,13 +190,29 @@ body {
   overflow: hidden;
 }
 
-.viewContactsButton {
+.viewPokemonsBtn {
   width: 150px;
   padding: 15px 0;
   text-align: center;
-  margin: 20px 10px;
+  margin: 10px;
   border-radius: 25px;
-  border: 2px solid #009688;
+  border: 2px solid #0492c2;
+  background: transparent;
+  cursor: pointer;
+  color: #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.createManyBtn {
+  width: 150px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 10px;
+  border-radius: 25px;
+  border: 2px solid #0492c2;
   background: transparent;
   cursor: pointer;
   color: #fff;
@@ -179,7 +222,7 @@ body {
   overflow: hidden;
 }
 .buttonSpan {
-  background: #009688;
+  background: #0492c2;
   height: 100%;
   width: 0;
   border-radius: 25px;
@@ -189,22 +232,30 @@ body {
   z-index: -1;
   transition: 0.5s;
 }
-.viewContactsButton:hover .buttonSpan {
+.createManyBtn:hover .buttonSpan {
   width: 100%;
 }
-.createContactButton:hover .buttonSpan {
-  width: 100%;
-}
-.viewContactsButton:hover {
+.createManyBtn:hover {
   border: none;
 }
-.createContactButton:hover {
+
+.viewPokemonsBtn:hover .buttonSpan {
+  width: 100%;
+}
+.createPokemonBtn:hover .buttonSpan {
+  width: 100%;
+}
+.viewPokemonsBtn:hover {
+  border: none;
+}
+.createPokemonBtn:hover {
   border: none;
 }
 
 .section-2 {
-  margin-top: 100px;
+  margin-top: 200px;
 }
+
 .AddContactDiv {
   width: 360px;
   height: 420px;
@@ -261,32 +312,75 @@ p {
   padding-top: 20px;
   font-size: 15px;
 }
-.contactCard {
-  width: 40%;
-  padding: 15px;
-  cursor: pointer;
-  display: flex;
-  border-radius: 10px;
-  background: #282d40;
-  margin-bottom: 15px;
-  justify-content: space-between;
-  border: 2px solid #009688;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  align-items: center;
-}
-.contactDetails {
-  display: flex;
-  align-items: center;
-  width: 450px;
-  justify-content: space-around;
-  height: 60px;
-}
+
 #Pokedex_p {
   letter-spacing: 0.68px;
   position: relative;
-  bottom: 30px;
 }
 #PokedexBtn {
   position: relative;
-  bottom: 30px;
+  bottom: 10x;
+}
+
+.section-2 {
+  margin-top: 200px;
+}
+.card button {
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+  height: 27px;
+  width: 50px;
+}
+
+.card .deleteBtn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.card .deleteBtn:hover {
+  background-color: #c0392b;
+}
+
+.card .editBtn {
+  background-color: #f39c12;
+  color: white;
+}
+
+.card .editBtn:hover {
+  background-color: #e67e22;
+}
+
+.card .selectPokBtn {
+  background-color: #3498db;
+  color: white;
+}
+
+.card .selectPokBtn:hover {
+  background-color: #2980b9;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover img {
+  opacity: 0.8;
+}
+
+.card .deleteBtn:hover,
+.card .editBtn:hover,
+.card .selectPokBtn:hover {
+  filter: brightness(0.9);
+}
+
+.card button {
+  transition: border-color 0.3s;
+}
+
+.card button:hover {
+  border-color: #333;
 }
