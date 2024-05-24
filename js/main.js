@@ -24,7 +24,7 @@ function displayPokemon(pokemon) {
             <h2 class="card-title">
               ${pokeman.id}. ${pokeman.name}
             </h2>
-            <button>Delete</button>
+            <button class="btn btn-outline-danger btnDelete" id="${pokeman.id}">Delete</button>
             <button>Edit</button>
           </li>`
     )
